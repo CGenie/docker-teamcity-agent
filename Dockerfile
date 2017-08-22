@@ -2,7 +2,12 @@
 FROM openjdk:9-jre
 MAINTAINER Alexander Gorokhov <sashgorokhov@gmail.com>
 
-RUN apt-get install -y unzip git
+RUN set -x; \
+    apt-get update \
+    && apt-get install -y --no-install-recommends \
+        git \
+        unzip \
+    && rm -rf /var/lib/apt/lists/*
 
 ENV SERVER_URL="" \
     AGENT_OWN_ADDRESS="" \
