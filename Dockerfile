@@ -6,6 +6,7 @@ RUN set -x; \
     && apt-get install -y --no-install-recommends \
         git \
         unzip \
+        wget \
     && rm -rf /var/lib/apt/lists/*
 
 COPY /setup_docker.sh /
