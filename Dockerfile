@@ -1,4 +1,5 @@
-FROM java:8-jre
+#FROM java:8-jre
+FROM openjdk:9-jre
 MAINTAINER Alexander Gorokhov <sashgorokhov@gmail.com>
 
 RUN apt-get install -y unzip git
